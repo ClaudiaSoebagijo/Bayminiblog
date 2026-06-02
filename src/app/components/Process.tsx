@@ -1,6 +1,17 @@
 import { useState } from "react";
 import { FileText, ChevronDown, ChevronUp } from "lucide-react";
 
+const assignment1Pdf = new URL("./assets/2a.pdf", import.meta.url).href;
+const assignment2Pdf = new URL("./assets/2b.pdf", import.meta.url).href;
+const assignment3Pdf = new URL("./assets/2c.pdf", import.meta.url).href;
+const assignment4Pdf = new URL("./assets/2d.pdf", import.meta.url).href;
+const assignment5Pdf = new URL("./assets/2e.pdf", import.meta.url).href;
+const assignment6Pdf = new URL("./assets/2f.pdf", import.meta.url).href;
+const assignment7Pdf = new URL("./assets/2g.pdf", import.meta.url).href;
+const assignment8Pdf = new URL("./assets/2g.pdf", import.meta.url).href;
+const assignment9Pdf = new URL("./assets/3a.pdf", import.meta.url).href;
+const assignment10Pdf = new URL("./assets/3c.pdf", import.meta.url).href;
+
 const steps = [
   {
     phase: "01",
@@ -14,6 +25,7 @@ const steps = [
       "Established team norms and project management approach",
     ],
     docLabel: "Project Ideation PDF",
+    docUrl: assignment1Pdf,
   },
   {
     phase: "02",
@@ -21,12 +33,13 @@ const steps = [
     date: "Assignment 2",
     summary: "Planned our qualitative research methodology — who to talk to, what to ask, and how to synthesize findings into actionable design insights.",
     bullets: [
-      "Identified target participant groups: chronic illness patients, caregivers, and clinicians",
+      "Identified target participant groups: chronic illness patients",
       "Wrote interview guides focused on symptom-logging habits and doctor visit preparation",
       "Chose semi-structured interviews and contextual inquiry as primary methods",
       "Defined research goals and success criteria",
     ],
     docLabel: "Design Research Plan PDF",
+    docUrl: assignment2Pdf,
   },
   {
     phase: "03",
@@ -34,12 +47,13 @@ const steps = [
     date: "Assignment 3",
     summary: "Conducted 5 user interviews and synthesized findings into affinity diagrams, personas, and key design insights that shaped our entire solution.",
     bullets: [
-      "5 semi-structured interviews with chronic illness patients aged 22–58",
+      "3 semi-structured interviews with chronic illness patients",
       "Affinity mapping revealed 3 core themes: memory burden, emotional fatigue, doctor-patient disconnect",
       "Created 2 primary personas: 'The Overwhelmed Tracker' and 'The Silent Sufferer'",
       "Key insight: in-the-moment, low-effort logging is more valuable than any retrospective tool",
     ],
     docLabel: "Design Research Review PDF",
+    docUrl: assignment3Pdf,
   },
   {
     phase: "04",
@@ -53,6 +67,7 @@ const steps = [
       "Task prioritization matrix informed by research data",
     ],
     docLabel: "Task Analysis PDF",
+    docUrl: assignment4Pdf,
   },
   {
     phase: "05",
@@ -66,6 +81,7 @@ const steps = [
       "Key pivot: physical companion device emerged as the preferred modality for in-the-moment logging",
     ],
     docLabel: "Design Check-In PDF",
+    docUrl: assignment5Pdf,
   },
   {
     phase: "06",
@@ -79,6 +95,7 @@ const steps = [
       "Instructors recommended simplifying the report generation step",
     ],
     docLabel: "Design Review PDF",
+    docUrl: assignment6Pdf,
   },
   {
     phase: "07",
@@ -92,6 +109,7 @@ const steps = [
       "Video embedded on this site and presented in class",
     ],
     docLabel: "Concept Video",
+    docUrl: assignment7Pdf,
   },
   {
     phase: "08",
@@ -105,6 +123,7 @@ const steps = [
       "Identified top 3 issues: unclear mic activation, confusing history navigation, report format ambiguity",
     ],
     docLabel: "Paper Prototype PDF",
+    docUrl: assignment8Pdf,
   },
   {
     phase: "09",
@@ -118,6 +137,7 @@ const steps = [
       "Final changes: one-tap mic start, simplified history calendar, streamlined report wizard",
     ],
     docLabel: "Usability Testing PDF",
+    docUrl: assignment9Pdf,
   },
   {
     phase: "10",
@@ -131,6 +151,7 @@ const steps = [
       "Presented to class panel; received commendation for accessibility considerations",
     ],
     docLabel: "Digital Mockup PDF",
+    docUrl: assignment10Pdf,
   },
 ];
 
@@ -200,13 +221,28 @@ export function Process() {
                           ))}
                         </ul>
                         {/* PDF slot */}
-                        <div style={{ background: "#f3f0ff", border: "2px dashed rgba(124,58,237,0.22)", borderRadius: 12, padding: "14px 18px", display: "flex", alignItems: "center", gap: 12 }}>
-                          <FileText size={18} color="#a78bfa" />
-                          <div>
-                            <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "0.82rem", color: "#7c3aed", margin: 0 }}>{step.docLabel}</p>
-                            <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.72rem", color: "#a78bfa", margin: "2px 0 0" }}>Upload your PDF here to share it publicly</p>
+                        {step.docUrl ? (
+                          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                              <FileText size={18} color="#a78bfa" />
+                              <div>
+                                <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "0.82rem", color: "#7c3aed", margin: 0 }}>{step.docLabel}</p>
+                                <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.72rem", color: "#4a4060", margin: "2px 0 0" }}>Click to open the PDF in a new tab.</p>
+                              </div>
+                            </div>
+                            <a href={step.docUrl} target="_blank" rel="noreferrer" style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 16px", borderRadius: 999, background: "#7c3aed", color: "white", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, textDecoration: "none", width: "fit-content" }}>
+                              View PDF
+                            </a>
                           </div>
-                        </div>
+                        ) : (
+                          <div style={{ background: "#f3f0ff", border: "2px dashed rgba(124,58,237,0.22)", borderRadius: 12, padding: "14px 18px", display: "flex", alignItems: "center", gap: 12 }}>
+                            <FileText size={18} color="#a78bfa" />
+                            <div>
+                              <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "0.82rem", color: "#7c3aed", margin: 0 }}>{step.docLabel}</p>
+                              <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.72rem", color: "#a78bfa", margin: "2px 0 0" }}>Upload your PDF here to share it publicly</p>
+                            </div>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>

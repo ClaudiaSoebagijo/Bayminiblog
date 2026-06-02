@@ -1,5 +1,7 @@
 import { AlertCircle, Lightbulb, Mic, FileText, ClipboardList } from "lucide-react";
 
+const conceptVideo = new URL("./assets/baymini.mov", import.meta.url).href;
+
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "#ede9fe", color: "#7c3aed", borderRadius: 999, padding: "5px 14px", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "0.72rem", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: 16 }}>
@@ -71,15 +73,11 @@ export function Solution() {
               </div>
             ))}
 
-            {/* Video placeholder */}
             <div style={{ background: "#1a1128", borderRadius: 18, overflow: "hidden", position: "relative", aspectRatio: "16/9", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid rgba(124,58,237,0.3)" }}>
-              <div style={{ position: "absolute", inset: 0, background: "linear-gradient(135deg, rgba(124,58,237,0.4), rgba(167,139,250,0.2))" }} />
-              <div style={{ position: "relative", zIndex: 1, textAlign: "center" }}>
-                <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(255,255,255,0.15)", backdropFilter: "blur(8px)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 12px" }}>
-                  <div style={{ width: 0, height: 0, borderLeft: "20px solid white", borderTop: "12px solid transparent", borderBottom: "12px solid transparent", marginLeft: 4 }} />
-                </div>
-                <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", color: "rgba(255,255,255,0.7)", fontSize: "0.8rem", margin: 0, fontWeight: 600 }}>Concept Video — Coming Soon</p>
-              </div>
+              <video controls loop muted playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }}>
+                <source src={conceptVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
 

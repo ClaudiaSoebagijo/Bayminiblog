@@ -15,7 +15,7 @@ export function Footer() {
         </div>
         <div style={{ width: "100%", height: 1, background: "rgba(124,58,237,0.2)" }} />
         <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.8rem", color: "rgba(196,181,253,0.45)", margin: 0 }}>
-          © 2025 BayMini — CSE 440, University of Washington · Yi, Anna, Claudia, Kevin, Sahana
+          © 2026 BayMini — CSE 440, University of Washington · Yi, Anna, Claudia, Kevin, Sahana
         </p>
       </div>
     </footer>

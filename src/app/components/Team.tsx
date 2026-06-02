@@ -1,9 +1,9 @@
 const members = [
-  { name: "Claudia", role: "UX Research Lead", initials: "CL", hue: 258, desc: "Led user interviews and synthesized research insights into actionable design principles." },
-  { name: "Sahana", role: "Interaction Design", initials: "SA", hue: 272, desc: "Designed the core voice-logging flow and companion device interaction model." },
-  { name: "Kevin", role: "Visual & UI Design", initials: "KE", hue: 286, desc: "Crafted the high-fidelity Figma prototype and visual design system." },
-  { name: "Anna", role: "Prototyping & Testing", initials: "AN", hue: 245, desc: "Built paper prototypes and ran usability evaluation sessions." },
-  { name: "Yi", role: "Product Strategy", initials: "YI", hue: 300, desc: "Defined the product scope, competitive landscape, and report generation feature." },
+  { name: "Claudia Soebagijo", initials: "CS", hue: 258 },
+  { name: "Sahana Hegde", initials: "SH", hue: 272 },
+  { name: "Kevin Wu", initials: "KW", hue: 286 },
+  { name: "Anna Martin", initials: "AM", hue: 245 },
+  { name: "Yi Zeng", initials: "YZ", hue: 300 },
 ];
 
 export function Team() {
@@ -19,12 +19,12 @@ export function Team() {
             Built with care by five.
           </h2>
           <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1.05rem", color: "#6b5fa3", lineHeight: 1.65, maxWidth: "44ch", margin: "0 auto" }}>
-            A multidisciplinary team from UC Berkeley united by a shared mission: better tools for people managing chronic illness.
+            A multidisciplinary team from University of Washington united by a shared mission: better tools for people managing chronic illness.
           </p>
         </div>
 
         {/* Cards */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 20 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(5, minmax(0, 1fr))", gap: 20 }}>
           {members.map((m) => (
             <div key={m.name} style={{ background: "white", border: "1.5px solid rgba(124,58,237,0.1)", borderRadius: 20, padding: "28px 22px", display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 14, boxShadow: "0 2px 16px rgba(124,58,237,0.05)", transition: "transform 0.2s, box-shadow 0.2s" }}
               onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLElement).style.boxShadow = "0 12px 32px rgba(124,58,237,0.14)"; }}
@@ -35,8 +35,6 @@ export function Team() {
               </div>
               <div>
                 <h4 style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 900, fontSize: "1.1rem", color: "#1a1128", margin: "0 0 4px 0" }}>{m.name}</h4>
-                <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 700, fontSize: "0.72rem", color: "#7c3aed", margin: "0 0 8px 0", textTransform: "uppercase", letterSpacing: "0.06em" }}>{m.role}</p>
-                <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "0.82rem", color: "#6b5fa3", lineHeight: 1.55, margin: 0 }}>{m.desc}</p>
               </div>
             </div>
           ))}
