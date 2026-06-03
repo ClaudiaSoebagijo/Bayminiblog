@@ -1,4 +1,4 @@
-const bayMiniFooter = new URL("./assets/BayMini.png", import.meta.url).href;
+const bayMiniFooter = new URL("./assets/baymini.png", import.meta.url).href;
 
 export function Footer() {
   return (

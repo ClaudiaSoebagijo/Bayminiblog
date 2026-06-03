@@ -1,4 +1,4 @@
-const bayMiniImage = new URL("./assets/BayMini.png", import.meta.url).href;
+const bayMiniImage = new URL("./assets/baymini.png", import.meta.url).href;
 
 const TEAM = [
   { initial: "Y", name: "Yi", hue: 305 },

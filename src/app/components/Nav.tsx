@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const bayMiniLogo = new URL("./assets/BayMini.png", import.meta.url).href;
+const bayMiniLogo = new URL("./assets/baymini.png", import.meta.url).href;
 
 const links = [
   { label: "Overview", href: "#overview" },
