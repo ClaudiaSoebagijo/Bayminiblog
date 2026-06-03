@@ -1,10 +1,10 @@
-import { BayMiniMascot } from "./BayMiniMascot";
+const bayMiniFooter = new URL("./assets/BayMini.png", import.meta.url).href;
 
 export function Footer() {
   return (
     <footer style={{ background: "#1a1128", padding: "60px 24px 40px", textAlign: "center" }}>
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
-        <BayMiniMascot size={64} />
+        <img src={bayMiniFooter} alt="BayMini" style={{ width: 64, height: 64, objectFit: "cover" }} />
         <div>
           <p style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 900, fontSize: "1.5rem", color: "white", margin: "0 0 4px", letterSpacing: "-0.02em" }}>
             Bay<span style={{ color: "#a78bfa" }}>Mini</span>

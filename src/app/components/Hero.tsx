@@ -1,4 +1,4 @@
-import { BayMiniMascot } from "./BayMiniMascot";
+const bayMiniImage = new URL("./assets/BayMini.png", import.meta.url).href;
 
 const TEAM = [
   { initial: "Y", name: "Yi", hue: 305 },
@@ -18,7 +18,14 @@ export function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center flex flex-col items-center gap-8 pt-28 pb-20">
         {/* Mascot */}
         <div style={{ filter: "drop-shadow(0 12px 32px rgba(124,58,237,0.28))" }}>
-          <BayMiniMascot size={160} animated />
+          <img
+            src={bayMiniImage}
+            alt="BayMini device"
+            width={220}
+            height={220}
+            style={{ width: 220, height: 220, objectFit: "contain", animation: "mascotFloat 3.2s ease-in-out infinite" }}
+          />
+          <style>{`@keyframes mascotFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }`}</style>
         </div>
 
         {/* Badge */}

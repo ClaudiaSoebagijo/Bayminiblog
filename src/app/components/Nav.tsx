@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { BayMiniMascot } from "./BayMiniMascot";
 import { Menu, X } from "lucide-react";
+
+const bayMiniLogo = new URL("./assets/BayMini.png", import.meta.url).href;
 
 const links = [
   { label: "Overview", href: "#overview" },
@@ -17,8 +18,12 @@ export function Nav() {
     <nav className="fixed top-0 left-0 right-0 z-50" style={{ background: "rgba(250,248,255,0.88)", backdropFilter: "blur(14px)", borderBottom: "1px solid rgba(124,58,237,0.1)" }}>
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#overview" className="flex items-center gap-2">
-          <div style={{ width: 36, height: 36, display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <BayMiniMascot size={28} />
+          <div style={{ width: 42, height: 42, display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <img
+              src={bayMiniLogo}
+              alt="BayMini"
+              style={{ width: 42, height: 42, objectFit: "cover" }}
+            />
           </div>
           <span style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 900, color: "#7c3aed", fontSize: "1.2rem", letterSpacing: "-0.02em" }}>BayMini</span>
         </a>
