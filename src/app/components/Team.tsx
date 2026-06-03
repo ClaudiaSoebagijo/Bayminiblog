@@ -1,9 +1,9 @@
 const members = [
-  { name: "Claudia Soebagijo", initials: "CS", hue: 258 },
-  { name: "Sahana Hegde", initials: "SH", hue: 272 },
-  { name: "Kevin Wu", initials: "KW", hue: 286 },
-  { name: "Anna Martin", initials: "AM", hue: 245 },
   { name: "Yi Zeng", initials: "YZ", hue: 300 },
+  { name: "Anna Martin", initials: "AM", hue: 245 },
+  { name: "Claudia Soebagijo", initials: "CS", hue: 258 },
+  { name: "Kevin Wu", initials: "KW", hue: 286 },
+  { name: "Sahana Hegde", initials: "SH", hue: 272 },
 ];
 
 export function Team() {
