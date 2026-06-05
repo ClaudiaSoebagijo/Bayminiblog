@@ -22,7 +22,7 @@ export function Problem() {
               Chronic illness makes doctor visits a guessing game.
             </h2>
             <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "1.05rem", color: "#4a4060", lineHeight: 1.75, marginBottom: "1.5rem" }}>
-              Patients with chronic illness face serious difficulties keeping track of their flare-up symptoms — and when they finally get to a doctor's appointment, they can't accurately recall what they experienced days or weeks ago.
+              Patients with chronic illness face serious difficulties keeping track of their flare-up symptoms and when they finally get to a doctor's appointment, they can't accurately recall what they experienced days or weeks ago.
             </p>
             <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "1.05rem", color: "#4a4060", lineHeight: 1.75 }}>
               This gap between lived experience and clinical recall leads to misdiagnoses, under-treatment, and patients feeling unheard.
@@ -33,8 +33,8 @@ export function Problem() {
           <div className="flex flex-col gap-4">
             {[
               { stat: "60%", label: "of chronic illness patients report forgetting key symptoms before appointments", color: "#7c3aed" },
-              { stat: "2.7×", label: "longer to get accurate diagnosis without consistent symptom tracking", color: "#a78bfa" },
-              { stat: "1 in 3", label: "patients feel their doctor doesn't fully understand their condition", color: "#6d28d9" },
+              { stat: "2×", label: "longer to get accurate diagnosis without consistent symptom tracking", color: "#a78bfa" },
+              { stat: "52%", label: "patients feel their doctor doesn't fully understand their condition", color: "#6d28d9" },
             ].map((item) => (
               <div key={item.stat} style={{ background: "#faf8ff", border: "1.5px solid rgba(124,58,237,0.12)", borderRadius: 16, padding: "20px 24px", display: "flex", alignItems: "center", gap: 20 }}>
                 <div style={{ fontFamily: "'Nunito', sans-serif", fontWeight: 900, fontSize: "2rem", color: item.color, whiteSpace: "nowrap" }}>{item.stat}</div>
@@ -50,7 +50,7 @@ export function Problem() {
 
 export function Solution() {
   const features = [
-    { icon: <Mic size={22} color="#7c3aed" />, title: "Voice Interaction", desc: "Talk to BayMini naturally during a flare-up — no typing needed when you're in pain." },
+    { icon: <Mic size={22} color="#7c3aed" />, title: "Voice Interaction", desc: "Talk to BayMini naturally during a flare-up, no typing needed when you're in pain." },
     { icon: <ClipboardList size={22} color="#7c3aed" />, title: "Customizable Questions", desc: "Pre-loaded symptom prompts you can tailor to your specific condition and triggers." },
     { icon: <FileText size={22} color="#7c3aed" />, title: "Doctor-Ready Reports", desc: "Auto-generated summaries so your experience is accurately conveyed at every visit." },
   ];
@@ -88,10 +88,10 @@ export function Solution() {
               A little companion with a big memory.
             </h2>
             <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "1.05rem", color: "#4a4060", lineHeight: 1.75, marginBottom: "1.25rem" }}>
-              BayMini is a companion device you can verbally interact with to track your symptoms the moment you experience them — no friction, no forgetting.
+              BayMini is a companion device you can verbally interact with to track your symptoms the moment you experience them, no friction, no forgetting.
             </p>
             <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 400, fontSize: "1.05rem", color: "#4a4060", lineHeight: 1.75 }}>
-              Its app lets you log symptoms with customizable pre-set questions. At your next doctor visit, BayMini generates an accurate report so your doctor gets the full picture — not just what you can remember under pressure.
+              The app lets you log symptoms with customizable pre-set questions. At your next doctor visit, BayMini generates an accurate report so your doctor gets the full picture, not just what you can remember under pressure.
             </p>
           </div>
         </div>

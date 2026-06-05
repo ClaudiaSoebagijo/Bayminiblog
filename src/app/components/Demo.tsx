@@ -51,7 +51,7 @@ export function Demo() {
             See BayMini in action.
           </h2>
           <p style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "1.05rem", color: "#c4b5fd", lineHeight: 1.65, maxWidth: "48ch", margin: "0 auto" }}>
-            Key screens from our high-fidelity prototype — designed to minimize friction and maximize recall.
+            Key screens from our high-fidelity prototype, designed to minimize friction and maximize recall.
           </p>
         </div>
 
